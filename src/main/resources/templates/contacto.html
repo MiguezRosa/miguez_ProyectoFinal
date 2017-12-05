@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layout">
+
+<body>
+
+				<div class="col-9 este" layout:fragment="contenido">
+					<ul id="Lista-links" >
+		
+			
+			 <li> <a href="https://www.google.com"> Google </a> </li>
+			 <li> <a href="https://www.youtube.com/"> YouTube </a> </li>
+			 <li> <a href="https://www.facebook.com/"> Facebook </a> </li>
+		</ul>
+		
+					<h3>correo</h3>
+					<ul>
+						<li>info@creaturevistaweb.com</li>
+					</ul>
+					<p class="alert alert-danger smoll"   th:text="${mensajeError}"></p>
+					<form action="/recibirComentario" method="POST" >
+						<input type="text" name="nombre" placeholder="nombre..." th:value="${nombreAnterior}"></input>
+						<input type="text" name="mensaje" placeholder="deja tu comentario..." th:value="${comentarioAnterior}"></input>
+						<input type="email" name="email" placeholder="ejemplo@gmail.com" th:value="${mailAnterior}"></input>
+						<button type="submit">Enviar</button>
+					</form>
+				</div>
+
+
+
+</body>
+</html>

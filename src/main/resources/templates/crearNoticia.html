@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layout">
+
+	
+	<div class="col-9" layout:fragment="contenido">
+		<form action="/recibirComentario" method="POST" >
+			<input type="text" name="nombre" placeholder="usuario..." th:value="${nombreAnterior}"></input>
+			<input type="text" name="password" placeholder="password..." th:value="${passwordAnterior}"></input>
+			<input type="email" name="email" placeholder="ejemplo@gmail.com" th:value="${mailAnterior}"></input>
+			<button type="submit">Enviar</button>
+		</form>
+	</div>
+					
+		
+
+</html>
